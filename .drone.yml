@@ -1,0 +1,10 @@
+kind: pipeline
+name: Openware Swagger
+
+steps:
+- name: Build Assets
+  image: node:11
+  commands:
+  - yarn
+  - yarn build
+  - yarn test
