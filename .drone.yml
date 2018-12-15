@@ -8,3 +8,28 @@ steps:
   - yarn
   - yarn build
   - yarn test
+
+- name: Prepare tag
+  image: alpine/git
+  when:
+    branch:
+      - master
+    event:
+      - push
+  commands:
+    - echo $(git rev-parse --short HEAD) > .tags
+
+- name: Build Image
+  image: plugins/docker
+  when:
+    branch:
+      - master
+    event:
+      - push
+  settings:
+    repo: quay.io/openware/swagger
+    auto_tag: true
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
