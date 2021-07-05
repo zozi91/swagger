@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <MenuApp>
-              Openware API Documentation
+              CX Exchange API Documentation
           </MenuApp>
         </header>
         <Swagger />

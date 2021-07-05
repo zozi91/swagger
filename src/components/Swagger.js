@@ -28,7 +28,7 @@ Swagger.propTypes = {
 };
 
 Swagger.defaultProps = {
-  url: `https://raw.githubusercontent.com/rubykube/peatio/master/docs/api/swagger.json`
+  url: `https://raw.githubusercontent.com/CX-Exchange/cx_peatio/main/docs/api/swagger.json`
 };
 
 export default Swagger;
