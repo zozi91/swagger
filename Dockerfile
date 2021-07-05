@@ -7,7 +7,7 @@ USER node
 RUN yarn install
 RUN yarn build
 
-FROM quay.io/openware/wio:0.1.0 AS production
+FROM quay.io/openware/wio:8816622 AS production
 
 RUN addgroup -S app -g 1000 && adduser -S -h /home/app -s /bin/sh -u 1000 app
 
